@@ -1,0 +1,152 @@
+/*============
+   IMPORTS
+==============*/
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);   /* this imports the Source Sans Pro Google font */
+@import url(https://fonts.googleapis.com/css?family=Reenie+Beanie);    	/* this imports the Reenie Beanie Google font */
+
+
+/*===============
+   MAIN STYLES
+================*/
+
+body {
+    margin: 0;
+	background-image: linear-gradient(to right, #2376ae, #963484); 		/* this creates a gradient background using two colours */
+	height: 100%;
+}
+
+h1, p {
+    font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+}
+
+h1 {
+    font-size: 60px;    
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.main-container {			/* this places the container in the center of the page */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-outer {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-pic {
+
+	width: 27%;
+    background: url(img/ian-snapper.jpg) no-repeat center center;
+	background-size: cover;
+    
+	display: flex;			/* this places the Maimonides quote at the bottom */
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.quote {
+    color: whitesmoke;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: 'Reenie Beanie', cursive;
+	margin-bottom: 10px;
+}
+
+img .icon {
+	text-align: center;
+	color: white;
+}
+
+.construction {
+	text-align: center;
+	margin-top: 30px;
+	color: white;
+}
+/*===============
+  GRID BOXES - using Flexbox
+=================*/
+
+.flex-inner {
+	height: 600px;
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+	
+}
+
+.box {
+    flex: 1 1 33.33%;		/* Flex-basis of 33.33% to split boxes into thirds */
+    color: white;
+	text-align: center;
+}
+
+
+.box1 {
+	background: #1abc9c; 
+	
+	display: flex; 			
+	flex-direction: column;
+	justify-content: center;/* these places the text in the center of the box */
+	
+	flex-basis: 66.66%;		/* Flex-basis of 66.66% so Name box takes up two thirds */
+}
+
+.box2 {background:#e57e22; display: flex; justify-content: center; align-items: center;transition: all 1s} /* flex;center;center; places the text in the center of the box. Transition animates the rotate transform. */
+.box3 {background:#9b59b6; display: flex; justify-content: center; align-items: center;transition: all 1s} 
+.box4 {background:#34495e; display: flex; justify-content: center; align-items: center;transition: all 1s}
+.box5 {background:#f1c40f; display: flex; justify-content: center; align-items: center;transition: all 1s} 
+.box6 {background:#3498db; display: flex; justify-content: center; align-items: center;transition: all 1s} 
+.box7 {background:#66bef8; display: flex; justify-content: center; align-items: center;transition: all 1s} 
+.box8 {background:#e74c3c; display: flex; justify-content: center; align-items: center;transition: all 1s}
+
+.box:hover {
+	transform: rotate(360deg);
+}
+
+
+/*===============
+  MEDIA QUERIES
+=================*/
+
+/*Mobiles*/
+@media all and (max-width : 479px) {
+		.main-container {
+		height: 100vh;
+		display: block;
+	}
+	
+	.profile-pic {
+		visibility: hidden;
+		width: 0;
+	}
+	
+	.flex-inner {
+		width: 100%;
+		height: 100vh;
+	}
+	
+	.box1 {
+		background: url(img/ian-snapper.jpg) no-repeat center center;
+		background-size: cover;
+		flex-basis: 100%;
+	}
+	
+	.box7 {background:#1abc9c;}
+
+}
+
+/*Tablets and Landscape phones*/
+@media all and (min-width : 479px) {
+	/* work in progress... */
+
+}
